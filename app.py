@@ -26,6 +26,7 @@ ADMIN_PASSWORD = os.getenv("ADMIN_PASSWORD")
 
 
 # ======================
+
 # Basic Routes
 # ======================
 @app.route("/")
@@ -61,6 +62,54 @@ def contact_page():
 # Contact Form (Mongo + Email)
 # ======================
 
+# @app.route("/contact.html", methods=["POST"])
+# def contact():
+
+#     name = request.form.get("name")
+#     email = request.form.get("email")
+#     subject = request.form.get("subject")
+#     message = request.form.get("message")
+
+#     # Save to MongoDB
+#     contact_collection.insert_one({
+#         "name": name,
+#         "email": email,
+#         "subject": subject,
+#         "message": message,
+#         "date": datetime.utcnow()
+#     })
+
+#     # Email Notification
+#     sender = os.getenv("EMAIL_USER")
+#     password = os.getenv("EMAIL_PASS")
+
+#     msg = MIMEMultipart()
+#     msg["From"] = sender
+#     msg["To"] = sender
+#     msg["Subject"] = f"New Portfolio Message from {name}"
+
+#     body = f"""
+#     Name: {name}
+#     Email: {email}
+#     Subject: {subject}
+
+#     Message:
+#     {message}
+#     """
+
+#     msg.attach(MIMEText(body, "plain"))
+
+#     try:
+#         server = smtplib.SMTP_SSL("smtp.gmail.com", 465)
+#         server.login(sender, password)
+#         server.sendmail(sender, sender, msg.as_string())
+#         server.quit()
+#     except Exception as e:
+#         print("Email Error:", e)
+
+#     return "OK"
+
+
 @app.route("/contact.html", methods=["POST"])
 def contact():
 
@@ -78,35 +127,9 @@ def contact():
         "date": datetime.utcnow()
     })
 
-    # Email Notification
-    sender = os.getenv("EMAIL_USER")
-    password = os.getenv("EMAIL_PASS")
+    print("Message saved successfully")
 
-    msg = MIMEMultipart()
-    msg["From"] = sender
-    msg["To"] = sender
-    msg["Subject"] = f"New Portfolio Message from {name}"
-
-    body = f"""
-    Name: {name}
-    Email: {email}
-    Subject: {subject}
-
-    Message:
-    {message}
-    """
-
-    msg.attach(MIMEText(body, "plain"))
-
-    try:
-        server = smtplib.SMTP_SSL("smtp.gmail.com", 465)
-        server.login(sender, password)
-        server.sendmail(sender, sender, msg.as_string())
-        server.quit()
-    except Exception as e:
-        print("Email Error:", e)
-
-    return "OK"
+    return redirect("/")
 
 
 # ======================
