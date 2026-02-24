@@ -1,0 +1,11 @@
+# Environment variables
+.env
+
+# Log files
+*.log
+
+# Linter config
+.hintrc
+
+# Virtual environment activation file
+activate.bat

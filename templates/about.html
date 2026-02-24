@@ -1,0 +1,194 @@
+ 
+  {% extends 'base.html' %}
+ 
+ {% block body  %}
+ <!-- About Section -->
+    <section id="about" class="about section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <span class="subtitle">About Me</span>
+        <h2 >About Me</h2>
+        <p>Final-year CSE (Data Science) student | Python, DSA & Web Development | Aspiring Problem Solver | Building AI-based learning solutions</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-5">
+          <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="150">
+            <div class="profile-card">
+              <div class="profile-header">
+                <div class="profile-avatar">
+                  <img src="{{ url_for('static', filename='assets/img/vipul.jpeg') }}" class="img-fluid" alt="">
+                  <div class="status-indicator"></div>
+                </div>
+                <h3>Vipul Paswan</h3>
+                <span class="role">Data Science & Backend Developer</span>
+                <div class="availability">
+                    <span>Final Year B.Tech | 2026 Graduate</span>
+                    </div>
+              </div>
+
+              <div class="profile-stats">
+                <div class="stat-item">
+                  <h4>10+</h4>
+                  <p>Projects</p>
+                </div>
+                <div class="stat-item">
+                  <h4>150+</h4>
+                <p>DSA Problems Practiced</p>
+                </div>
+                <div class="stat-item">
+                  <h4>3+</h4>
+                <p>Internship Experience</p>
+                </div>
+              </div>
+
+              <div class="profile-actions">
+                <a href="https://drive.google.com/file/d/1OTZxxlvZSoFLw3LMovVRAi2J1ZnTYt93/view?usp=sharing" class="btn-primary"><i class="bi bi-download"></i> Download CV</a>
+                <a href="contact.html" class="btn-secondary"><i class="bi bi-envelope"></i> Contact</a>
+              </div>
+
+              <div class="social-connect">
+                <a href="https://www.linkedin.com/in/vipulpaswan/" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                <a href="https://github.com/VipulPaswan" title="GitHub"><i class="bi bi-github"></i></a>
+                <a href="https://www.kaggle.com/vipulpaswan" target="_blank" rel="noopener" title="Kaggle"><i class="bi bi-bar-chart-fill"></i></a>
+                <a href="https://leetcode.com/u/vipulpaswan/" target="_blank" rel="noopener" title="LeetCode">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png" 
+                        alt="LeetCode" 
+                        style="width: 25px; height: 25px;">
+                    </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-8" data-aos="fade-left" data-aos-delay="200">
+            <div class="content-wrapper">
+              <div class="bio-section">
+                <div class="section-tag">About Me</div>
+                <h2>Passionate About Software, Data & Problem Solving</h2>
+                <p>I am Vipul Paswan, a final-year B.Tech student in Computer Science & Engineering (Data Science) at KCC Institute of Technology and Management. I am passionate about building technology-driven solutions that solve real-world problems.
+                    I specialize in Python, Data Structures & Algorithms, and Backend Development, and I am continuously improving my skills in React and full-stack development. I have completed internships in Data Science and AI-based learning programs, where I gained practical experience in problem-solving and project development.
+                    Currently, I am working on an AI-powered Doubt Solver platform designed to help students get step-by-step solutions when guidance is not available. My focus is on writing clean, efficient code and building scalable digital products.
+                    I believe in consistency, discipline, and continuous learning. My goal is to create impactful technology solutions while growing as a strong software developer and problem solver.</p>
+
+              <div class="details-grid">
+                <div class="detail-item" data-aos="fade-up" data-aos-delay="250">
+                  <i class="bi bi-briefcase"></i>
+                  <div class="detail-content">
+                   <span>Specialization</span>
+                    <strong>Data Science & Backend Development</strong>
+                  </div>
+                </div>
+
+                <div class="detail-item" data-aos="fade-up" data-aos-delay="300">
+                  <i class="bi bi-mortarboard"></i>
+                  <div class="detail-content">
+                    <span>Degree</span>
+                    <strong>B.Tech CSE (Data Science)</strong>
+                  </div>
+                </div>
+
+                <div class="detail-item" data-aos="fade-up" data-aos-delay="350">
+                  <i class="bi bi-geo-alt"></i>
+                  <div class="detail-content">
+                    <span>Location</span>
+                    <strong>Greater Noida, Uttar Pradesh,India</strong>
+                  </div>
+                </div>
+
+                <div class="detail-item" data-aos="fade-up" data-aos-delay="100">
+                  <i class="bi bi-envelope"></i>
+                  <div class="detail-content">
+                    <span>Email</span>
+                    <strong>vipulpaswan95@gmail.com</strong>
+                  </div>
+                </div>
+
+                <div class="detail-item" data-aos="fade-up" data-aos-delay="150">
+                  <i class="bi bi-phone"></i>
+                  <div class="detail-content">
+                    <span>Phone</span>
+                    <strong>+919555873362</strong>
+                  </div>
+                </div>
+
+                <div class="detail-item" data-aos="fade-up" data-aos-delay="200">
+                  <i class="bi bi-calendar-check"></i>
+                  <div class="detail-content">
+                    <span>Availability</span>
+                    <strong>Open to Work</strong>
+                  </div>
+                </div>
+              </div>
+
+              <div class="skills-showcase" data-aos="fade-up" data-aos-delay="250">
+                <div class="section-tag">Core Skills</div>
+                        <h3>Technical Proficiency</h3>
+
+                        <div class="skills-list skills-animation">
+
+                        <div class="skill-item">
+                            <div class="skill-info">
+                            <span class="skill-name">Python</span>
+                            <span class="skill-percent">85%</span>
+                            </div>
+                            <div class="progress">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" aria-label="Python 85%"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-item">
+                            <div class="skill-info">
+                            <span class="skill-name">Data Structures & Algorithms (C++ / Python)</span>
+                            <span class="skill-percent">75%</span>
+                            </div>
+                            <div class="progress">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" aria-label="Data Structures & Algorithms 75%"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-item">
+                            <div class="skill-info">
+                            <span class="skill-name">Backend Development (Flask / Django)</span>
+                            <span class="skill-percent">70%</span>
+                            </div>
+                            <div class="progress">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" aria-label="Backend Development 70%"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-item">
+                            <div class="skill-info">
+                            <span class="skill-name">Machine Learning & EDA</span>
+                            <span class="skill-percent">65%</span>
+                            </div>
+                            <div class="progress">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" aria-label="Machine Learning & EDA 65%"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-item">
+                            <div class="skill-info">
+                            <span class="skill-name">Frontend (HTML, CSS, JavaScript, React)</span>
+                            <span class="skill-percent">70%</span>
+                            </div>
+                            <div class="progress">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" aria-label="Frontend 70%"></div>
+                            </div>
+                        </div>
+
+                        </div>
+                    </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /About Section -->
+{% endblock body  %}

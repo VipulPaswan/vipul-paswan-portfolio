@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin - Messages</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-dark text-light">
+
+<!-- Top Navbar -->
+<nav class="navbar navbar-dark bg-black shadow-sm">
+    <div class="container-fluid">
+        <span class="navbar-brand fw-bold">Admin Dashboard</span>
+        <a href="/admin/logout" class="btn btn-outline-light btn-sm">Logout</a>
+    </div>
+</nav>
+
+<div class="container py-5">
+
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h3 class="fw-bold">Contact Messages</h3>
+        <span class="badge bg-primary">{{ messages|length }} Total</span>
+    </div>
+
+    <div class="card bg-black border-0 shadow-lg">
+        <div class="card-body p-0">
+
+            <div class="table-responsive">
+                <table class="table table-dark table-hover align-middle mb-0">
+
+                    <thead class="table-secondary text-dark">
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Subject</th>
+                            <th>Message</th>
+                            <th>Date</th>
+                            <th class="text-center">Action</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        {% for msg in messages %}
+                        <tr>
+                            <td>{{ msg.name }}</td>
+                            <td>{{ msg.email }}</td>
+                            <td>{{ msg.subject }}</td>
+                            <td style="max-width: 250px; word-wrap: break-word;">
+                                {{ msg.message }}
+                            </td>
+                            <td>
+                                {{ msg.date.strftime('%d-%m-%Y %H:%M') if msg.date }}
+                            </td>
+                            <td class="text-center">
+                                <a href="/admin/delete/{{ msg._id }}"
+                                   class="btn btn-danger btn-sm"
+                                   onclick="return confirm('Delete this message?')">
+                                   Delete
+                                </a>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+
+                </table>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

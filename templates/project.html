@@ -1,0 +1,274 @@
+    {% extends 'base.html' %}
+ 
+ {% block body  %}
+  
+  
+   <!-- Projects Section -->
+<section id="projects" class="portfolio section">
+
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <span class="subtitle">Projects</span>
+    <h2>My Projects</h2>
+    <p>Real-world projects in AI, Machine Learning, Backend Development, and Frontend Applications.</p>
+  </div>
+
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+    <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+
+      <!-- Filters -->
+      <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="200">
+        <li data-filter="*" class="filter-active">All</li>
+        <li data-filter=".filter-ai">AI / ML</li>
+        <li data-filter=".filter-backend">Backend</li>
+        <li data-filter=".filter-frontend">Frontend</li>
+        <li data-filter=".filter-dsa">DSA</li>
+      </ul>
+
+      <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="300">
+
+        <!-- AI Doubt Solver -->
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-ai">
+          <div class="portfolio-card">
+            <div class="portfolio-image-container">
+              <img src="{{ url_for('static', filename='assets/img/project_sc/ai doubt_solver.png') }}" alt="AI Doubt Solver project screenshot" class="img-fluid">
+              <div class="portfolio-overlay">
+                <div class="portfolio-info">
+                  <span class="project-category">AI Project</span>
+                  <h4>AI Doubt Solver</h4>
+                </div>
+                <div class="portfolio-actions">
+                  <a href="https://github.com/VipulPaswan" target="_blank" class="portfolio-details">
+                    <i class="bi bi-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="portfolio-meta">
+              <div class="project-tags">
+                <span class="tag">Flask</span>
+                <span class="tag">AI</span>
+              </div>
+              <div class="project-year">2025</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Attendance Management -->
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-ai">
+          <div class="portfolio-card">
+            <div class="portfolio-image-container">
+              <img src="{{ url_for('static', filename='assets/img/project_sc/attendence.png') }}" alt="Attendance Management System project screenshot" class="img-fluid">
+              <div class="portfolio-overlay">
+                <div class="portfolio-info">
+                  <span class="project-category">AI / OpenCV</span>
+                  <h4>Attendance Management System</h4>
+                </div>
+                <div class="portfolio-actions">
+                  <a href="https://github.com/VipulPaswan/Attendance-Management-System-Using-Face-Recognition" target="_blank" class="portfolio-details">
+                    <i class="bi bi-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="portfolio-meta">
+              <div class="project-tags">
+                <span class="tag">OpenCV</span>
+                <span class="tag">Python</span>
+              </div>
+              <div class="project-year">2024</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Shipment Price Prediction -->
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-ai">
+          <div class="portfolio-card">
+            <div class="portfolio-image-container">
+              <img src="{{ url_for('static', filename='assets/img/project_sc/ai doubt_solver.png') }}" alt="Shipment Price Prediction project screenshot" class="img-fluid">
+              <div class="portfolio-overlay">
+                <div class="portfolio-info">
+                  <span class="project-category">Machine Learning</span>
+                  <h4>Shipment Price Prediction</h4>
+                </div>
+                <div class="portfolio-actions">
+                  <a href="https://github.com/VipulPaswan/Shipment_Price_perdiction" target="_blank" class="portfolio-details">
+                    <i class="bi bi-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="portfolio-meta">
+              <div class="project-tags">
+                <span class="tag">scikit-learn</span>
+                <span class="tag">Flask</span>
+              </div>
+              <div class="project-year">2024</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Blog Writing Project -->
+<div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-backend">
+  <div class="portfolio-card">
+    <div class="portfolio-image-container">
+      <img src="{{ url_for('static', filename='assets/img/project_sc/blog.png') }}" alt="Blog Writing Platform project screenshot" class="img-fluid">
+      <div class="portfolio-overlay">
+        <div class="portfolio-info">
+          <span class="project-category">Backend Blog System</span>
+          <h4>Blog Writing Platform</h4>
+        </div>
+        <div class="portfolio-actions">
+          <a href="https://github.com/VipulPaswan" target="_blank" class="portfolio-details">
+            <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="portfolio-meta">
+      <div class="project-tags">
+        <span class="tag">Flask</span>
+        <span class="tag">CRUD</span>
+        <span class="tag">Authentication</span>
+      </div>
+      <div class="project-year">2025</div>
+    </div>
+  </div>
+</div>
+
+
+<!-- News API Project -->
+<div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-backend">
+  <div class="portfolio-card">
+    <div class="portfolio-image-container">
+      <img src="{{ url_for('static', filename='assets/img/project_sc/newsapi.png') }}" alt="News API Integration project screenshot" class="img-fluid">
+      <div class="portfolio-overlay">
+        <div class="portfolio-info">
+          <span class="project-category">API Integration</span>
+          <h4>News API Integration</h4>
+        </div>
+        <div class="portfolio-actions">
+          <a href="https://github.com/VipulPaswan/Newsapi" target="_blank" class="portfolio-details">
+            <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="portfolio-meta">
+      <div class="project-tags">
+        <span class="tag">REST API</span>
+        <span class="tag">Flask</span>
+        <span class="tag">JSON</span>
+      </div>
+      <div class="project-year">2024</div>
+    </div>
+  </div>
+</div>
+
+
+<!-- File CRUD Operations -->
+<div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-backend">
+  <div class="portfolio-card">
+    <div class="portfolio-image-container">
+      <img src="{{ url_for('static', filename='assets/img/project_sc/curd.png') }}" alt="File CRUD Operations project screenshot" class="img-fluid">
+      <div class="portfolio-overlay">
+        <div class="portfolio-info">
+          <span class="project-category">Backend System</span>
+          <h4>File CRUD Operations</h4>
+        </div>
+        <div class="portfolio-actions">
+          <a href="https://github.com/VipulPaswan/File_CRUD_Op" target="_blank" class="portfolio-details">
+            <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="portfolio-meta">
+      <div class="project-tags">
+        <span class="tag">Python</span>
+        <span class="tag">CRUD</span>
+        <span class="tag">File Handling</span>
+      </div>
+      <div class="project-year">2024</div>
+    </div>
+  </div>
+</div>
+
+        <!-- Shoe-Landing-Page -->
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-frontend">
+          <div class="portfolio-card">
+            <div class="portfolio-image-container">
+              <img src="{{ url_for('static', filename='assets/img/project_sc/shoe.png') }}" alt="Shoe Landing Page project screenshot" class="img-fluid">
+              <div class="portfolio-overlay">
+                <div class="portfolio-info">
+                  <span class="project-category">Frontend</span>
+                  <h4>Shoe-Landing-Page (Tailwind)</h4>
+                </div>
+                <div class="portfolio-actions">
+                  <a href="https://github.com/VipulPaswan/Tailwind-Shoe-Landing-Page" target="_blank" class="portfolio-details">
+                    <i class="bi bi-arrow-right"></i>
+                  </a>
+                </div>
+              </div> 
+            </div>
+            <div class="portfolio-meta">
+              <div class="project-tags">
+                <span class="tag">Tailwind</span>
+                <span class="tag">HTML</span>
+              </div>
+              <div class="project-year">2025</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- DSA -->
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-dsa">
+          <div class="portfolio-card">
+            <div class="portfolio-image-container">
+              <img src="{{ url_for('static', filename='assets/img/project_sc/100day logic.png') }}" alt="100 Days Logic Challenge project screenshot" class="img-fluid">
+              <div class="portfolio-overlay">
+                <div class="portfolio-info">
+                  <span class="project-category">Problem Solving</span>
+                  <h4>100 Days Logic Challenge</h4>
+                </div>
+                <div class="portfolio-actions">
+                  <a href="https://github.com/VipulPaswan/VipulPaswan-100-Days-Logic-Challenge" target="_blank" class="portfolio-details">
+                    <i class="bi bi-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="portfolio-meta">
+              <div class="project-tags">
+                <span class="tag">C++</span>
+                <span class="tag">Python</span>
+                <span class="tag">Java Script</span>
+              </div>
+              <div class="project-year">2025</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Bottom CTA -->
+    <div class="portfolio-bottom" data-aos="fade-up" data-aos-delay="400">
+      <div class="row align-items-center">
+        <div class="col-lg-8">
+          <h3>Want to explore more projects?</h3>
+          <p>Check out my complete GitHub repository collection for detailed source code and implementations.</p>
+        </div>
+        <div class="col-lg-4 text-lg-end">
+          <a href="https://github.com/VipulPaswan" target="_blank" class="btn btn-accent">View GitHub</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+
+        {% endblock body  %}

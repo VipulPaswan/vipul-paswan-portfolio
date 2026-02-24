@@ -1,0 +1,122 @@
+ {% extends 'base.html' %}
+ 
+ {% block body  %}
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <!-- <section id="hero" class="hero section dark-background"> -->
+
+      <!-- <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row justify-content-center">
+          <div class="col-lg-8 text-center">
+            <h2>Hi, I'm Vipul Paswan</h2>
+            <p>I'm a <span class="typed" data-typed-items="Problem Solver, Developer, Data Science Enthusiast, Tech Innovator, Creative Thinker"></span></p>
+            <div class="social-links">
+              <div class="social-links">
+
+              <a href="https://github.com/VipulPaswan"><i class="bi bi-github"></i></a>
+              <a href="#"><i class="bi bi-leetcode"></i></a>
+              <a href="https://www.linkedin.com/in/vipulpaswan/"><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>  -->
+
+     <section id="hero" 
+class="hero-section bg-dark text-light py-5 position-relative overflow-hidden"
+style="min-height:100vh; display:flex; align-items:center;">
+
+  <!-- Background Gradient Overlay -->
+  <div class="position-absolute w-100 h-100 top-0 start-0"
+       style="background: radial-gradient(circle at 30% 30%, rgba(26, 25, 25, 0.15), transparent 40%),
+               radial-gradient(circle at 70% 70%, rgba(41, 41, 41, 0.15), transparent 40%);
+               z-index:0;">
+  </div>
+
+  <div class="container position-relative" style="z-index:2;">
+    <div class="row align-items-center">
+
+      <!-- Left Text -->
+      <div class="col-lg-6 text-center text-lg-start">
+
+        <h2 class="fw-bold display-5 mb-3 animate-slide">
+          Hi, I'm <span class="text-danger">Vipul Paswan</span>
+        </h2>
+
+        <p class="fs-4">
+          I'm a 
+          <span class="typed text-warning fw-semibold"
+          data-typed-items="Problem Solver, Developer, Data Science Enthusiast, Tech Innovator, Creative Thinker"></span>
+        </p>
+
+        <p class="mt-4 text-secondary lead">
+          I build scalable web applications and solve real-world problems using
+          Python, Flask, MongoDB and modern frontend technologies.
+        </p>
+
+        <div class="mt-4">
+          <a href="project.html" 
+             class="btn btn-danger me-3 px-4 py-2 shadow-lg hero-btn">
+             View Projects
+          </a>
+
+          <a href="contact.html" 
+             class="btn btn-outline-light px-4 py-2 hero-btn">
+             Contact Me
+          </a>
+        </div>
+
+      </div>
+      
+      <!-- Right Image -->
+      <div class="col-lg-6 text-center mt-5 mt-lg-0">
+
+  <div style="
+      position: relative;
+      display: inline-block;
+      animation: floatImage 4s ease-in-out infinite;
+  ">
+
+    <!-- Glow Background -->
+    <div style="
+        position: absolute;
+        inset: -20px;
+        background: linear-gradient(45deg,#3f3e3e,#393b3b);
+        filter: blur(60px);
+        opacity: 0.6;
+        z-index: -1;
+        border-radius: 30px;
+    "></div>
+
+    <img src="{{ url_for('static', filename='assets/img/vipul.jpeg') }}"
+         class="img-fluid rounded-4 shadow-lg"
+         style="
+            max-height:450px;
+            object-fit:cover;
+            border-radius:20px;
+            transition: all 0.4s ease;
+         "
+         onmouseover="this.style.transform='scale(1.08) rotate(2deg)'; 
+                      this.style.boxShadow='0 25px 50px rgba(255,0,150,0.5)';"
+         onmouseout="this.style.transform='scale(1) rotate(0deg)'; 
+                     this.style.boxShadow='0 10px 30px rgba(0,0,0,0.4)';"
+         alt="Vipul Paswan">
+
+  </div>
+
+</div>
+
+    </div>
+  </div>
+
+</section>
+
+
+    <!-- </section>/Hero Section -->
+
+
+
+  </main>
+
+   {% endblock body  %}
