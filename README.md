@@ -17,7 +17,7 @@
 
 ## 🌐 Live Links
 
-🔗 **Live Demo:** https://your-render-link.onrender.com  
+🔗 **Live Demo:** https://vipul-paswan-portfolio.onrender.com/  
 📂 **GitHub Repo:** https://github.com/VipulPaswan/vipul-paswan-portfolio  
 
 ---
