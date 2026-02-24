@@ -1,6 +1,6 @@
-from flask import Flask, render_template, request, redirect, session, url_for
+from flask import Flask, render_template, request, redirect, session, url_for,flash
 from pymongo import MongoClient
-from datetime import datetime
+from datetime import datetime, timezone
 from dotenv import load_dotenv
 from bson.objectid import ObjectId
 from sendgrid import SendGridAPIClient
@@ -67,41 +67,38 @@ def contact():
     subject = request.form.get("subject")
     message_text = request.form.get("message")
 
-    # Save to MongoDB
     contact_collection.insert_one({
         "name": name,
         "email": email,
         "subject": subject,
         "message": message_text,
-        "date": datetime.utcnow()
+        "date": datetime.now(timezone.utc)
     })
 
-    # Send Email via SendGrid
     try:
         sg = SendGridAPIClient(os.getenv("SENDGRID_API_KEY"))
 
         message = Mail(
             from_email=os.getenv("EMAIL_USER"),
-            to_emails=os.getenv("EMAIL_USER")
+            to_emails=os.getenv("EMAIL_USER"),
+            subject=f"New Portfolio Message from {name}",
+            plain_text_content=f"""
+Name: {name}
+Email: {email}
+Subject: {subject}
+
+Message:
+{message_text}
+"""
         )
 
-        message.template_id = os.getenv("SENDGRID_TEMPLATE_ID")
-
-        message.dynamic_template_data = {
-            "name": name,
-            "email": email,
-            "subject": subject,
-            "message": message_text
-        }
-
         sg.send(message)
-        print("Email sent successfully")
+
+        return "OK"   # VERY IMPORTANT
 
     except Exception as e:
         print("SendGrid Error:", e)
-
-    return redirect("/")
-
+        return "Error sending message"
 # ======================
 # Admin Login
 # ======================
@@ -161,4 +158,4 @@ def admin_logout():
 # ======================
 
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True)
